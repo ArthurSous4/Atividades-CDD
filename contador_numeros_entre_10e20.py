@@ -6,7 +6,7 @@ cont2=0
 
 for x in range(1,11):
     n=int(input("digite um número: "))
-    if n>=10 and n<=20:
+    if n>=10 or n<=20:
         cont=cont+1
     else:
         cont2=cont2+1
