@@ -12,7 +12,7 @@ print(f"{lista} - {somatotal} - {media}")
 for x in range(5):
     if lista[x]%2==0:
         print(lista[x])
-
+##2
 maiorNumero=lista[0]
 menorNumero=lista[0]
 for y in range(5):
@@ -25,7 +25,7 @@ for z in range(5):
         menorNumero = lista[z]
 
 print(menorNumero)
-
+##3
 for i in range(5):
     if media < lista[i]:
         contadorMedia=contadorMedia+1
