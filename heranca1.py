@@ -18,9 +18,28 @@ class IngressoVIP(Ingresso):
 ingressoLP=IngressoVIP(100)
 ingressoLP.imprimeValor(10)
 
+------------------------------------------------
 
-
-
-
-
+class Forma():
+    def __init__(self):
+        self.area=0
+        self.perimetro=0
+        
+class Retangulo(Forma):
+    def __init__(self,base,altura):
+        super().__init__()
+        self.base = base
+        self.altura = altura
+        
+    def calcularArea(self,base,altura):
+        resulArea = base * altura 
+        
+    def calcularPeri(self,base,altura):
+        resulPeri= base*2+altura*2
+        
+class Triangulo(Forma):
+    def __init__(self,base,altura,):
+        super().__init__()
+        self.base = base
+        self.altura = altura
 
