@@ -119,9 +119,12 @@ class Triatleta(Ciclista,Corredor,Nadador):
         super().__init__()
         self.nome=nome
         self.peso=peso
+        self.correndo=False
+        self.pedalando=False
+        self.nadando=False
 
     def correr(self):
-        if self.nadando == False or self.pedalando == False:
+        if self.nadando == False and self.pedalando == False:
 
             if self.aquecido == True:
                 if self.aposentado == True:
@@ -136,11 +139,11 @@ class Triatleta(Ciclista,Corredor,Nadador):
             else:
                 print("O atleta precisa aquecer")
 
-        elif self.nadando == True or self.pedalando == True:
+        else:
             print("O atleta já está fazendo um exercicio")
 
     def nadar(self):
-        if self.correndo == False or self.pedalando == False:
+        if self.correndo == False and self.pedalando == False:
             if self.aquecido == True:
                 if self.aposentado == True:
                     print(f"O atleta {self.nome} está aposentado, não pode nadar")
@@ -158,7 +161,7 @@ class Triatleta(Ciclista,Corredor,Nadador):
             print("O atleta já está fazendo um exercicio")
 
     def pedalar(self):
-        if self.nadando == False or self.correndo == False:
+        if self.nadando == False and self.correndo == False:
             if self.aquecido == True:
                 if self.aposentado == True:
                     print(f"O atleta {self.nome} está aposentado, não pode pedalar")
@@ -178,9 +181,13 @@ class Triatleta(Ciclista,Corredor,Nadador):
 
 joao=Triatleta("Joao", 80)
 
+joao.pedalar()
 joao.aquecer()
 joao.nadar()
 joao.correr()
+joao.pararNadar()
+joao.correr()
+joao.pedalar()
 
 
 
